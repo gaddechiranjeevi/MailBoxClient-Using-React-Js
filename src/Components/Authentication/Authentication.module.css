@@ -1,0 +1,14 @@
+.auth {
+    margin: 0 3rem;
+    text-align: center;
+  }
+.change{
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  color: #183ce1;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px;
+  width: 32%;
+}
+  
