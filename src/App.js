@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import Header from './components/layout/Header';
-import AuthPage from './components/pages/AuthPage';
-import HomePage from './components/pages/HomePage';
+import Header from './Components/Layout/Header';
+import AuthPage from './Components/Pages/AuthPage';
+import HomePage from './components/Pages/HomePage';
+import InboxPage from './Components/Pages/InboxPage';
 import ComposeMailPage from "./Components/Pages/ComposeMailPage";
 import SentPage from "./Components/Pages/SentPage";
 
@@ -28,6 +29,10 @@ function App() {
             </Route>
             <Route path='/compose'>
               {isLogin && <ComposeMailPage />}
+              {!isLogin && <Redirect to='/auth' />}
+            </Route>
+            <Route path='/inbox'>
+              {isLogin && <InboxPage />}
               {!isLogin && <Redirect to='/auth' />}
             </Route>
             <Route path='/sent'>
