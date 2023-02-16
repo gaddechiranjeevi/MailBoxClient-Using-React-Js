@@ -1,0 +1,50 @@
+.inbox {
+    margin: 3rem auto;
+    text-align:unset;
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+.inbox h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 1rem 1.2rem;
+    padding: 8px 12px;
+}
+
+.inbox ul{
+    border: 1px solid rgb(119, 117, 117);
+    margin: 0;
+}
+
+.inbox p{
+    text-align: justify;
+    max-width: 50%;
+    font-size: 17px;
+}
+
+.inbox li{
+    margin: 1rem;
+    list-style: decimal;
+}
+
+.inbox button{
+    color: white;
+    background-color: red;
+    border: 1px solid lightcoral;
+    text-align: center;
+    width: 12%;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 7px;
+    transition: background-color 1s;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 35rem;
+}
+
+.inbox button:hover,
+.inbox button:focus {
+    background-color: rgb(240, 101, 147);
+}

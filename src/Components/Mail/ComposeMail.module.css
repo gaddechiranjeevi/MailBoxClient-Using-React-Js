@@ -1,0 +1,41 @@
+.compose {
+    margin: 2rem 7rem;
+    text-align: center;
+}
+
+.compose h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 1rem 1.2rem;
+    padding: 8px 12px;
+}
+
+.compose input {
+    margin: 0 auto;
+    padding: 10px;
+    border: 0.5px solid rgb(215, 215, 215);
+    margin-bottom: 0.65rem;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 1s;
+  }
+  
+  .compose input:hover,
+  .compose input:active,
+  .compose input:focus {
+    background-color: rgb(227, 227, 227);
+  }
+  
+.compose button {
+    width: 50%;
+    padding: 8px;
+    margin: 3rem 0 3rem 0;
+    border: none;
+    background-color: rgb(53, 158, 243);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 100;
+  }
