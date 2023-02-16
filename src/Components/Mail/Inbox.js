@@ -31,6 +31,19 @@ const Inbox = () => {
         // eslint-disable-next-line
     }, []);
 
+    const deleteHandler = async(mail) => {
+        console.log(mail);
+        try {
+            const res = await axios.delete(
+            `https://mail-box-8d69e-default-rtdb.firebaseio.com/${userMail}Inbox/${mail}.json`
+            );
+            console.log(res);
+            fetchMails();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
     return (
         <section className={classes.inbox}>
             <h1>Received Mails</h1>
@@ -53,6 +66,10 @@ const Inbox = () => {
                                             <span>From: {mails[mail].from}</span>
                                         </li> 
                                     </div>
+                                    <button
+                                        onClick={() => deleteHandler(mail)}>
+                                        Delete
+                                    </button>
                                     <hr />
                                 </div>)})}
                  </ul>
