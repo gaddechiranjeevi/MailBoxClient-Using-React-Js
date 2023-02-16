@@ -7,10 +7,24 @@ import classes from "./Header.module.css";
 
 const Header = () => {
   const isLogin = useSelector(state => state.authentication.isLogin);
+  const inboxMails = useSelector(state => state.compose.fetchMail);
   const dispatch = useDispatch();
   const history = useHistory();
+  const [unreadCount, setUnreadCount] = useState(0);
 
-  
+  useEffect(() => {
+    if (inboxMails) {
+      let count = 0;
+      Object.keys(inboxMails).map((mail) => {
+            if (inboxMails[mail].read === false) {
+              count = count + 1;
+              console.log(count);
+            setUnreadCount(count);
+        }
+      });
+    }
+  }, [inboxMails]);
+
 
 
     const logOutHandler = () => {
@@ -53,6 +67,11 @@ const Header = () => {
                   <NavLink to="/inbox"  
                   activeClassName={classes.active} >
                   Inbox
+                  {unreadCount === 0 ? (
+                    <></>
+                  ) : (
+                    <span>{unreadCount} Unread</span>
+                  )}
                   </NavLink>
               </li>
             )}   

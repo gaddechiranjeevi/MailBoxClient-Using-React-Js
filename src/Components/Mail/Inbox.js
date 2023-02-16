@@ -36,6 +36,12 @@ const Inbox = () => {
             <h1>Received Mails</h1>
             <div>
                 <ul>
+                {mails!== null &&
+                        Object.keys(mails).map((mail) => {
+                            let read = false;
+                            if(mails[mail].read !== false){
+                                read = true;
+                            }
                             return (
                                 <div key={mail.toString()}>
                                     <div
@@ -48,7 +54,7 @@ const Inbox = () => {
                                         </li> 
                                     </div>
                                     <hr />
-                                </div>
+                                </div>)})}
                  </ul>
             </div>
         </section>
