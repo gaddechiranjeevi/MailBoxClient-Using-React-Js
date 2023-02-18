@@ -26,9 +26,7 @@ const Inbox = () => {
     useEffect(() => {
         setInterval(() => {
             fetchMails();
-            console.log('called');
-        }, 200000)
-        // eslint-disable-next-line
+        }, 1000)
     }, []);
 
     const deleteHandler = async(mail) => {
