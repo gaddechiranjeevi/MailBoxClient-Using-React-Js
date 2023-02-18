@@ -26,7 +26,7 @@ const Inbox = () => {
     useEffect(() => {
         setInterval(() => {
             fetchMails();
-        }, 1000)
+        }, 2000)
     }, []);
 
     const deleteHandler = async(mail) => {
